@@ -1,0 +1,77 @@
+Passing data from parent to child:
+
+in parent:
+in the ts file create variable and value
+in the html file use tag of the child and assign a value x: <child [propertyName]='parentvariablename'></child>
+
+in child:
+in the ts file use @Input () propertName: datatype;
+in the html file : <p>{{ parentvariablename }}</p>
+
+
+share data between child components to parent component:
+1) via @ViewChild decorator 
+2)When there is an event: using the @Output Decorator and Event Emitter.
+
+Two way data binding:
+->give var name in ts file
+-> use [(ngModel)]="var name" in the html tag
+Property binding:
+[]
+
+angular directive - can manipulate DOM objects - they can add, remove html elements from dom dynamically
+
+1) component directive -> angular directive with a template view
+2) structural -> can change dom layout by adding and removing dom elements. -> ngIf, ngFor, ngSwitchCase
+3) attribute -> can change the appearance or behavior of an element, component or another directive. -> ngStyle, ngClass
+4) custom -> can create custome directive from scratch.
+
+
+NgFor -> structural directive -> used to render array inside the view
+
+we cannot use ng-template as a normal tag. we can only use it with structural directives
+
+ANGULAR PIPE:
+PIPES ARE USED FOR TRANSFORMING DATA INTO A PARTICULAR FORMAT WHEN WE ONLY NEED THAT DATA TRANSFORMED IN A TEMPLATE OR THE HTML VIEW
+
+9 INBUILT PIPES:
+-> UPPERCASE PIPES
+-> LOWERCASE
+-> DECIMAL / NUMBER
+-> CURRENCY
+-> DATE
+-> JSON PIPE
+-> PRECENT PIPE
+-> SLICE
+
+angular service:
+we can use angular service when you need to share data between components who do not have a parent child relationship
+
+foreach
+if else
+filter
+map
+switch
+
+(), [], [()]
+
+formatting code- alt + shift + f
+
+2 ways to build reactive forms:
+1)using form-group
+2)using form-builder
+
+USING FORM GROUP
+=>import ReactiveFormsModule in app.module.ts
+=>in ts file make a form 
+ userForms: FormGroup = new FormGroup({
+    id: new FormControl('0'),
+    name: new FormControl(''),
+    username: new FormControl(''),
+    email: new FormControl('')
+    
+
+  })
+=>add form name to form tag
+<form [formGroup]="userForms">
+</form>

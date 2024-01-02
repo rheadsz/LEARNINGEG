@@ -1,0 +1,13 @@
+.container{
+    text-align: center;
+
+}
+#result{
+    border-radius: 20px solid black; 
+}
+.btn{
+    margin-top: 1%;
+    margin-right: 0.5%;
+    width: 6%;
+  
+}
